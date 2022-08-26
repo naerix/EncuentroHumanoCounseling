@@ -1,0 +1,114 @@
+.Benefits {
+    width: 100%;
+    overflow: hidden;
+    &-wrapper {
+        padding: 0 6rem;
+    }
+    &-grid {
+        width: 100%;
+        margin-top: 3rem;
+        @include grid(3,6rem);
+    }
+    &-item {
+        @include flex(column, nowrap, flex-start, center);
+        gap: 3rem;
+    }
+    &-card {
+        background: $color-lila-card;
+        color: $color-blanco;
+        width: 100%;
+        height: 30rem;
+    
+        overflow: hidden;
+
+        border-radius: $border-radius-card;
+    }
+    &-cardHeader {
+        background: $color-azul;
+        color: $color-blanco;
+        width: 100%;
+        min-height: 13rem;
+        padding: 2rem 4rem;
+        border-radius: $border-radius-card;
+
+        @include flex(column, nowrap, center, center);
+
+        &--bottom {
+            min-height: 15rem;
+        }
+    }
+    &-h3 {
+        font: {
+            weight: 600;
+            size: 2.5rem;
+        }
+    }
+    &-cardContent {
+        width: 100%;
+        min-height: 14rem;
+        padding: 0 4rem;
+
+        @include flex(column, nowrap, center, center);
+    }
+    &-p {
+        color: $color-azul;
+        font: {
+            weight: 400;
+            size: 1.8rem;
+        }
+    }
+    &-span {
+        font: {
+            weight: 300;
+        }
+    }
+
+
+    // Breakpoint 1200px 
+    @include media(1200px) {
+        &-grid {
+            width: 100%;
+            @include grid(2,6rem);
+        }
+    }
+    @include media(850px) {
+        &-grid {
+            width: 100%;
+            @include grid(2,3rem);
+        }
+        &-item {
+            gap: 1rem;
+        }
+        &-cardHeader {
+            padding: 2rem;
+            &--bottom {
+                min-height: auto;
+            }
+        }
+        &-h3 {
+            font: {
+                size: 2rem;
+            }
+        }
+    }
+    @include media(730px) {
+        &-wrapper {
+            padding: 2rem 0;
+        }
+        &-grid {
+            width: 100%;
+            @include grid(1,3rem);
+        }
+        &-item {
+            @include flex(row, nowrap, flex-start, center);
+        }
+        &-card {
+            width: 60%;
+            &Header {
+                &--bottom {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}

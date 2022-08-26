@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="http://www.example.com/">
+    <link rel="icon" type="image/png" href="assets/logo/Logo.png">
+    <title>Encuentro humano / Agendar</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/mail.js" type="module"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="Header" id="Header">
+        <div class="Header-wrapper Wrapper">
+            <nav class="Header-navbar Navbar">
+                <div class="Navbar-logo">
+                    <a class="Navbar-logoLink" href="./index.html" title="Encuentro Humano Counseling">
+                        <div class="Navbar-image">
+                            <img class="Navbar-svg" src="assets/logo/Logo.png" alt="Encuentro Humano Counseling">
+                        </div>
+                        <h1 class="Navbar-h1">Encuentro Humano Counseling</h1>
+                    </a>
+                </div>
+                <div class="Navbar-hamburger">
+                    <button class="Navbar-button" id="Hamburger">
+                        <span class="Navbar-line"></span>
+                        <span class="Navbar-line"></span>
+                    </button>
+                </div>
+                <ul class="Navbar-ul" id="Navbar">
+                    <li class="Navbar-li"><a href="./index.html" class="Navbar-link" title="Inicio">Inicio</a></li>
+                    <li class="Navbar-li"><a href="./funcion.html" class="Navbar-link" title="Cómo funciona?">¿Cómo funciona?</a></li>
+                    <li class="Navbar-li"><a href="./que-es.html" class="Navbar-link" title="Qué es el counseling?">¿Qué es?</a></li>
+                    <li class="Navbar-li"><a href="./sobre-mi.html" class="Navbar-link" title="Sobre mi">Sobre mí</a></li>
+                    <li class="Navbar-li"><a href="./agendar.html" class="Navbar-link Navbar-link--button" title="Agendar una sesión">Agendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- WhatsApp -->
+    <div class="WhatsApp">
+        <div class="WhatsApp-wrapper Wrapper">
+            <button class="WhatsApp-button">
+                <a href="https://wa.me/+5491130089076" target="_blank" title="WhatsApp">
+                    <svg class="WhatsApp-svg" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_10_335)">
+                        <circle cx="60" cy="60" r="60" fill="white"/>
+                        <path d="M100.8 34.2C86.3999 12 56.9999 5.4 34.1999 19.2C11.9999 33 4.7999 63 19.1999 85.2L20.3999 87L15.5999 105L33.5999 100.2L35.3999 101.4C43.1999 105.6 51.5999 108 59.9999 108C68.9999 108 77.9999 105.6 85.7999 100.8C108 86.4 114.6 57 100.8 34.2ZM88.1999 80.4C85.7999 84 82.7999 86.4 78.5999 87C76.1999 87 73.1999 88.2 61.1999 83.4C50.9999 78.6 42.5999 70.8 36.5999 61.8C32.9999 57.6 31.1999 52.2 30.5999 46.8C30.5999 42 32.3999 37.8 35.3999 34.8C36.5999 33.6 37.7999 33 38.9999 33H41.9999C43.1999 33 44.3999 33 44.9999 35.4C46.1999 38.4 49.1999 45.6 49.1999 46.2C49.7999 46.8 49.7999 48 49.1999 48.6C49.7999 49.8 49.1999 51 48.5999 51.6C47.9999 52.2 47.3999 53.4 46.7999 54C45.5999 54.6 44.9999 55.8 45.5999 57C47.9999 60.6 50.9999 64.2 53.9999 67.2C57.5999 70.2 61.1999 72.6 65.3999 74.4C66.5999 75 67.7999 75 68.3999 73.8C68.9999 72.6 71.9999 69.6 73.1999 68.4C74.3999 67.2 74.9999 67.2 76.1999 67.8L85.7999 72.6C86.9999 73.2 88.1999 73.8 88.7999 74.4C89.3999 76.2 89.3999 78.6 88.1999 80.4Z" fill="#4CCB5A"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_10_335">
+                        <rect width="120" height="120" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>                    
+                </a>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Agendar -->
+    <div class="Schedule Width">
+        <div class="Schedule-wraper Wrapper">
+            <div class="Schedule-header">
+                <h2 class="Schedule-h2">¿Cómo agendar un encuentro?</h2>
+            </div>
+            <div class="Schedule-cards">
+                <div class="Schedule-card">
+                    <span class="Schedule-number">1</span>
+                    <p class="Schedule-text">
+                        Mandame un <span class="Schedule-text--span"><a target="_blank" href="https://wa.me/+5491130089076">Whatsapp</a></span> con tu nombre y apellido.
+                    </p>
+                </div>
+                <div class="Schedule-card">
+                    <span class="Schedule-number">2</span>
+                    <p class="Schedule-text">
+                        Contame qué tipo de encuentro o consulta necesitás hacer.
+                    </p>
+                </div>
+                <div class="Schedule-card">
+                    <span class="Schedule-number">3</span>
+                    <p class="Schedule-text">
+                        Coordinamos una primera entrevista para conocernos un poco más.
+                    </p>
+                </div>
+                <div class="Schedule-card">
+                    <span class="Schedule-number">4</span>
+                    <p class="Schedule-text">
+                        <span class="Schedule-text--span">Y listo!</span> A partir de entonces vamos a poder comenzar este proceso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <section class="Form Width">
+        <div class="Form-waves">
+            <div class="Form-wave">
+                <svg class="Form-waveSvg" width="1920" height="340" viewBox="0 0 1920 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 318.529V0H1920V340C1866.18 270.51 1806.92 227.773 1742.22 211.787C1645.16 187.809 1580.91 202.76 1483 184.005C1385.09 165.249 1317.81 108.521 1246.42 102.612C1175.03 96.7026 1044.62 116.349 967.412 116.349C890.201 116.349 713.911 101.969 658.918 106.471C603.926 110.972 554.737 154.9 459.961 180.927C365.186 206.954 227.838 191.034 149.245 215.049C96.85 231.059 47.102 265.553 0 318.529Z"/>
+                </svg>                    
+            </div>
+            <div class="Form-wave">
+                <svg class="Form-waveSvg Form-waveSvg--white" width="1920" height="300" viewBox="0 0 1920 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 18.9447V300H1920V0C1866.18 61.3146 1806.92 99.0236 1742.22 113.129C1645.16 134.286 1580.91 121.094 1483 137.643C1385.09 154.192 1317.81 204.246 1246.42 209.46C1175.03 214.674 1044.62 197.339 967.412 197.339C890.201 197.339 713.911 210.027 658.918 206.055C603.926 202.083 554.737 163.323 459.961 140.358C365.186 117.394 227.838 131.44 149.245 110.251C96.85 96.1242 47.102 65.6888 0 18.9447Z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="Form-absolute">
+            <div class="Form-wrapper Wrapper">
+                <div class="Form-header">
+                    <h2 class="Form-h2">También podés dejarme un mail:</h2>
+                </div>
+                <form class="Form-form" action="" id="Form">
+                    <div class="Form-containerInput">
+                        <input class="Form-input" type="text" placeholder="Nombre" id="Form-name" required>
+                    </div>
+                    <div class="Form-containerInput">
+                        <input class="Form-input" type="email" placeholder="Mail" id="Form-mail" required>
+                    </div>
+                    <div class="Form-containerInput">
+                        <textarea class="Form-input Form-input--textarea" placeholder="¿En qué te puedo ayudar?" id="Form-message" required></textarea>
+                        <button class="Form-send" type="submit">
+                            <svg class="Form-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Alert -->
+
+    <div class="Alert" id="Alert">
+        <div class="Alert-wrapper Wrapper">
+            <div class="Alert-content">
+                <div class="Alert-title">
+                    <h2 class="Alert-h2">
+                        Gracias por contctarme
+                    </h2>
+                    <p class="Alert-text">
+                        En breve me pondré en contacto contigo
+                    </p>
+                </div>
+                <div class="Alert-footer">
+                    <p class="Alert-p">
+                        Encuentro Humano Counseling
+                    </p>
+                    <button class="Alert-button" id="Button-ok">Ir al inicio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Instagram -->
+    <div class="Width">
+        <div class="Instagram Section">
+            <div class="Instagram-wrapper Wrapper">
+                <div class="Instagram-header">
+                    <h2 class="Instagram-h2">¡No te pierdas de nada!</h2>
+                </div>
+                <div class="Instagram-content">
+                    <a class="Instagram-card" target="_blank" href="https://www.instagram.com/encuentrohumanocounseling/?hl=es">
+                        <div class="Instagram-icon">
+                            <img class="Instagram-img" src="./assets/icons/instagram.svg">
+                        </div>
+                        <p class="Instagram-p">encuentrohumanocounseling</p>
+                    </a>
+                    <p class="Instagram-text">Novedades, datos curiosos información y mucho más</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- footer -->
+    <footer class="Footer">
+        <div class="Footer-wrapper Wrapper">
+            <ul class="Footer-ul">
+                <li class="Footer-li">
+                    <a class="Footer-a" href="./">
+                        <div class="Footer-icon Footer-icon--logo">
+                            <img class="Footer-img" src="./assets/logo/Logo.png" alt="">
+                        </div>
+                        <p class="Footer-name">Encuentro Humano Counseling</p>
+                    </a>
+                </li>
+                <li class="Footer-li">
+                    <a class="Footer-a" target="_blank" href="https://www.instagram.com/encuentrohumanocounseling/?hl=es">
+                        <div class="Footer-icon">
+                            <img class="Footer-img" src="./assets/icons/instagram.svg" alt="">
+                        </div>
+                        <p class="Footer-text">encuentrohumanocounseling</p>
+                    </a>
+                </li>
+                <li class="Footer-li">
+                    <a class="Footer-a" href="mailto:lausigal97@hotmail.com">
+                        <div class="Footer-icon">
+                            <img class="Footer-img" src="./assets/icons/mail-icon.svg" alt="">
+                        </div>
+                        <p class="Footer-text">lausigal@hotmail.com</p>
+                    </a>
+                </li>
+            </ul>
+            <button class="Footer-button" id="To-top">
+                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                </svg>
+            </button>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,253 @@
+.AboutMe {
+    background: linear-gradient(to right, $color-lila 0%, rgb(122 107 255) 100%);
+    color: $color-azul;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    &-wrapper {}
+    &-header {
+        width: 75%;
+        height: 30rem;
+        margin: 0 auto;
+
+        position: relative;
+
+        @include flex(column, nowrap, center, flex-start);
+    }
+    &-title {
+        width: 100%;
+        margin: 0 auto;
+
+        @include flex(row, nowrap, flex-start, center);
+    }
+    &-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 30rem;
+        min-width: 30rem;
+        height: 30rem;
+        min-height: 30rem;
+        overflow: hidden;
+
+        border-radius: 100%;
+
+    }
+    &-img {
+        object-fit: cover;
+    }
+    &-h2 {
+        margin-left: 35rem;
+        font: {
+            size: 6rem;
+        }
+
+        @include flex(column, nowrap, center, flex-start);
+
+        &--hello {
+            font: {
+                weight: 900;
+            }
+        }
+        &--name {
+            font: {
+                weight: 500;
+            }
+        }
+    }
+    &-desc {
+        margin-left: 35rem;
+        margin-top: 2rem;
+        padding-left: 1.5rem;
+        font: {
+            size: 2.2rem;
+        }
+        &Li {
+            list-style: inside;
+
+        }
+    }
+    &-ul {
+        background: $color-blanco;
+
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        padding: 4rem;
+        overflow: hidden;
+
+        border-radius: 2rem;
+
+
+        @include flex(column, nowrap, center, flex-start);
+        gap: 2rem;
+    }
+    &-li {
+        width: 100%;
+
+        @include flex(row, nowrap, flex-start, center);
+        gap: 4rem;
+    }
+    &-icon {
+        background: $color-azul;
+        color: $color-blanco;
+        
+        width: 4.5rem;
+        min-width: 4.5rem;
+        height: 4.5rem;
+        min-height: 4.5rem;
+        padding: .5rem;
+
+        border-radius: 100%;
+    }
+    &-svg {
+        width: 100%;
+        height: 100%;
+    }
+    &-p {
+        font: {
+            weight: 400;
+            size: 2.5rem;
+        }
+        
+        &--bold {
+            font: {
+                weight: 700;
+            }
+        }
+    }
+
+
+    @include media(1090px) {
+        &-header {
+            height: 25rem;
+        }
+        &-image {
+            width: 25rem;
+            min-width: 25rem;
+            height: 25rem;
+            min-height: 25rem;
+        }
+        &-h2 {
+            margin-left: 30rem;
+            font: {
+                size: 5rem;
+            }
+        }
+        &-desc {
+            margin-left: 30rem;
+            font: {
+                size: 2rem;
+            }
+        }
+        &-p {
+            font: {
+                size: 2.2rem;
+            }
+        }
+    }
+    @include media(920px) {
+        &-header {
+            height: 20rem;
+        }
+        &-image {
+            width: 20rem;
+            min-width: 20rem;
+            height: 20rem;
+            min-height: 20rem;
+        }
+        &-h2 {
+            margin-left: 25rem;
+            font: {
+                size: 4.5rem;
+            }
+        }
+        &-desc {
+            margin-left: 25rem;
+            font: {
+                size: 2rem;
+            }
+        }
+        &-p {
+            font: {
+                size: 2rem;
+            }
+        }
+    }
+    @include media(800px) {
+        padding-top: 3rem;
+        &-header {
+            height: auto;
+        }
+        &-title {
+            gap: 2rem;
+        }
+        &-image {
+            position: static;
+        }
+        &-h2 {
+            margin: 0;
+        }
+        &-desc {
+            margin: 0;
+            margin-top: 2rem;
+        }
+        &-ul {
+            margin-top: 3rem;
+            padding: 2rem;
+        }
+        &-li {
+            @include flex(row, nowrap, flex-start, flex-start);
+            gap: 2rem;
+        }
+        &-icon {
+            width: 3rem;
+            min-width: 3rem;
+            height: 3rem;
+            min-height: 3rem;
+        }
+    }
+    @include media(760px) {
+        &-title {
+            gap: 1rem;
+        }
+        &-image {
+            width: 17rem;
+            min-width: 17rem;
+            height: 17rem;
+            min-height: 17rem;
+        }
+        &-h2 {
+            font: {
+                size: 4rem;
+            }
+        }
+        &-desc {
+            font: {
+                size: 1.8rem;
+            }
+        }
+        &-p {
+            font: {
+                size: 1.8rem;
+            }
+        }
+    }
+    @include media(660px) {
+        &-header {
+            width: 100%;
+        }
+        &-ul {
+            width: 100%;
+        }
+    }
+    @include media(415px) {
+        &-image {
+            width: 15rem;
+            min-width: 15rem;
+            height: 15rem;
+            min-height: 15rem;
+        }
+    }
+}

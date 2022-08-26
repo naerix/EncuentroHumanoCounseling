@@ -1,0 +1,110 @@
+.Encuentros {
+    width: 100%;
+    overflow: hidden;
+    &-wrapper {
+        @include flex(column, nowrap, flex-start, flex-start);
+    }
+    &-header {
+        width: 100%;
+        color: $color-azul;
+
+        @include flex(row, nowrap, space-between, center);
+    }
+    &-title {
+        margin-bottom: 1rem;
+        font: {
+            weight: 900;
+            size: 4.5rem;
+        }
+    }
+
+    &-buttons {
+        @include flex(row, nowrap, center, center);
+        gap: .5rem;
+        display: none;
+    }
+    &-button {
+        border: 1px solid $color-azul;
+        border-radius: $border-radius-card;
+        cursor: pointer;
+    }
+    &-svg {
+        width: 6rem;
+        height: 3rem;
+        fill: $color-azul;
+    }
+
+    // Cards
+    &-cards {
+        width: 100%;
+        @include grid(4,2rem);
+    }
+    &-card {
+        width: 100%;
+        height: 20rem;
+        overflow: hidden;
+        cursor: pointer;
+        
+        border-radius: $border-radius-card;
+        box-shadow: $box-shadow-card;
+        
+        position: relative;
+        
+        transition: all .3s ease;
+        
+        &:hover {
+            .Encuentros-img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &-image {
+        width: 100%;
+        height: 100%;
+    }
+    &-img {
+        object-fit: cover;
+        transition: 
+        transform 1s ease-in-out;
+        ;
+    }
+    &-info {
+        background: $color-azul-5;
+        color: $color-blanco;
+        width: 100%;
+        height: 100%;
+        padding: 2.5rem;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        @include flex(column, nowrap, space-between, flex-start);
+    }
+    &-name {
+        font: {
+            weight: 700;
+            size: 3rem;
+        }
+    }
+    &-text {
+        font: {
+            weight: 400;
+            size: 1.9rem;
+        }
+    }
+
+
+    // 
+    @include media(1150px) {
+        &-cards {
+            @include grid(2,2rem); 
+        }
+    }
+    // 
+    @include media(500px) {
+        &-cards {
+            @include grid(1,1rem); 
+        }
+    }
+}

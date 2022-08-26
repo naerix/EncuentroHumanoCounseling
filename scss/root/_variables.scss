@@ -1,0 +1,93 @@
+/*
+// Colores principales
+*/
+$color-blanco: rgb(240, 247, 251);
+    $color-blanco-3: rgba(240, 247, 251, 0.3);
+    $color-blanco-5: rgba(240, 247, 251, 0.5);
+    $color-blanco-8: rgba(240, 247, 251, 0.8);
+$color-gris: rgb(232, 239, 246);
+    $color-gris-3: rgba(232, 239, 246, 0.3);
+    $color-gris-5: rgba(232, 239, 246, 0.5);
+    $color-gris-8: rgba(232, 239, 246, 0.8);
+$color-negro: rgb(0, 0, 0);
+    $color-negro-2: rgba(0, 0, 0,0.2);
+    $color-negro-3: rgba(0, 0, 0,0.3);
+    $color-negro-5: rgba(0, 0, 0,0.5);
+    $color-negro-8: rgba(0, 0, 0,0.8);
+
+
+/*
+// Paleta de colores
+*/
+
+$color-azul: rgb(44, 67, 146);
+    $color-azul-3: rgba(44, 67, 146, 0.3);
+    $color-azul-4: rgba(44, 67, 146, 0.4);
+    $color-azul-5: rgba(44, 67, 146, 0.5);
+    $color-azul-6: rgba(44, 67, 146, 0.6);
+    $color-azul-7: rgba(44, 67, 146, 0.7);
+    $color-azul-8: rgba(44, 67, 146, 0.8);    
+$color-naranja: rgb(44, 67, 146);
+    $color-naranja-3: rgba(248, 143, 51, 0.3);
+    $color-naranja-4: rgba(248, 143, 51, 0.4);
+    $color-naranja-5: rgba(248, 143, 51, 0.5);
+    $color-naranja-6: rgba(248, 143, 51, 0.6);
+    $color-naranja-7: rgba(248, 143, 51, 0.7);
+    $color-naranja-8: rgba(248, 143, 51, 0.8);
+$color-lila: rgb(171, 182, 221);
+    $color-lila-3: rgba(171, 182, 221, 0.3);
+    $color-lila-4: rgba(171, 182, 221, 0.4);
+    $color-lila-5: rgba(171, 182, 221, 0.5);
+    $color-lila-6: rgba(171, 182, 221, 0.6);
+    $color-lila-7: rgba(171, 182, 221, 0.7);
+    $color-lila-8: rgba(171, 182, 221, 0.8);
+$color-gradient-naranja: rgb(223, 167, 131);
+    $color-gradient-naranja-3: rgba(223, 167, 131, 0.3);
+    $color-gradient-naranja-4: rgba(223, 167, 131, 0.4);
+    $color-gradient-naranja-5: rgba(223, 167, 131, 0.5);
+    $color-gradient-naranja-6: rgba(223, 167, 131, 0.6);
+    $color-gradient-naranja-7: rgba(223, 167, 131, 0.7);
+    $color-gradient-naranja-8: rgba(223, 167, 131, 0.8);
+$color-gradient-azul: rgb(201, 211, 230);
+    $color-gradient-azul-3: rgba(201, 211, 230, 0.3);
+    $color-gradient-azul-4: rgba(201, 211, 230, 0.4);
+    $color-gradient-azul-5: rgba(201, 211, 230, 0.5);
+    $color-gradient-azul-6: rgba(201, 211, 230, 0.6);
+    $color-gradient-azul-7: rgba(201, 211, 230, 0.7);
+    $color-gradient-azul-8: rgba(201, 211, 230, 0.8);
+
+$color-azul-claro: rgb(233, 240, 246);
+    $color-azul-claro-3: rgba(233, 240, 246, 0.3);
+    $color-azul-claro-4: rgba(233, 240, 246, 0.4);
+    $color-azul-claro-5: rgba(233, 240, 246, 0.5);
+    $color-azul-claro-6: rgba(233, 240, 246, 0.6);
+    $color-azul-claro-7: rgba(233, 240, 246, 0.7);
+    $color-azul-claro-8: rgba(233, 240, 246, 0.8);
+$color-lila-card: rgb(201, 211, 230);
+    $color-lila-card-3: rgba(201, 211, 230, 0.3);
+    $color-lila-card-4: rgba(201, 211, 230, 0.4);
+    $color-lila-card-5: rgba(201, 211, 230, 0.5);
+    $color-lila-card-6: rgba(201, 211, 230, 0.6);
+    $color-lila-card-7: rgba(201, 211, 230, 0.7);
+    $color-lila-card-8: rgba(201, 211, 230, 0.8);
+
+
+    $color-gradient-azul-9:#E8EFF6;
+
+/*
+// Tipografias
+*/
+    // Segoe Print
+    @font-face {font-family: 'Segoe Print', sans-serif; src: url('../fonts/segoepr.ttf');};
+    $font-segoe-print: 'Segoe Print', sans-serif;
+
+    // Open Sans
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+    $font-open-sans: 'Open Sans', sans-serif;
+
+
+/*
+// Variables generales
+*/
+$border-radius-card: 2.4rem;
+$box-shadow-card: .4rem .4rem .4rem rgba(0, 0, 0, 0.15);

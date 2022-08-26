@@ -1,0 +1,433 @@
+// Modalidad
+.Modality {
+    width: 100%;
+    overflow: hidden;
+    &-wrapper {}
+    &-header {
+        background: $color-azul;
+        color: $color-blanco;
+        padding: 4rem 0;
+    }
+    &-h2 {
+        font: {
+            weight: 500;
+            size: 2.5rem;
+        }
+        @include flex(column, nowrap, center, flex-start);
+    }
+    &-p {
+        margin-top: 2rem;
+        font: {
+            weight: 600;
+            size: 2.5rem;
+        }
+    }
+    &-cards {
+        width: 100%;
+        overflow: hidden;
+        @include flex(column, nowrap, center, center);
+        gap: 5.5rem;
+//     color: $color-azul;
+// }
+
+        &--mobile {
+            display: none;
+        }
+    }
+    &-containerCard {
+        width: 100%;
+        @include flex(column, nowrap, center, flex-start);
+        &--reverse {
+            @include flex(column, nowrap, center, flex-end);
+            .Modality-card {
+                @include flex(row-reverse, nowrap, flex-start, center);
+            }
+        }
+    }
+    &-card {
+        background: $color-azul-claro;
+        width: 80%;
+        height: 45rem;
+        overflow: hidden;
+
+        border-radius: 3.5rem;
+        box-shadow: 3px 3px 3px $color-negro-2;
+
+        @include flex(row, nowrap, flex-start, center);
+    }
+    &-image {
+        width: 42rem;
+        height: 100%;
+        overflow: hidden;
+
+        border-radius: 3.5rem;
+
+        position: relative;
+    }
+    &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &-gradient {
+        background: $color-azul-4;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+    &-info {
+        color: $color-azul;
+        width: calc(100% - 42rem);
+        height: 100%;
+        padding: 3.5rem;
+
+        @include flex(column, nowrap, space-between, flex-start);
+    }
+    &-text {
+        width: 100%;
+    }
+    &-h3 {
+        font: {
+            weight: 700;
+            size: 5rem;
+        }
+    }
+    &-desc {
+        margin: 1.5rem 0;
+        font: {
+            weight: 500;
+            size: 2.3rem;
+        }
+    }
+    &-ul {
+        font: {
+            weight: 400;
+            size: 2rem;
+        }    
+    }
+    &-li {
+        margin-left: 3rem;
+        list-style: disc;
+    }
+    &-contact {
+        width: 100%;
+
+        @include flex(row, nowrap, space-between, center);
+    }
+    &-duration {
+        @include flex(column, nowrap, center, flex-start);
+
+        font: {
+            weight: 400;
+            size: 1.8rem;
+        }
+    }
+    &-a {
+        background: $color-naranja;
+        padding: 1rem 1.5rem;
+
+        border-radius: 10rem;
+
+        font: {
+            weight: 600;
+            size: 1.9rem;
+        }
+        color: $color-blanco;
+    }
+
+    @include media(1300px) {
+        &-card {
+            width: 85%;
+        }
+    }
+    @include media(1230px) {
+        &-card {
+            width: 90%;
+        }
+    }
+    @include media(1180px) {
+        &-h3 {
+            font: {
+                size: 4rem;
+            }
+        }
+        &-desc {
+            font: {
+                size: 2rem;
+            }
+        }
+        &-ul {
+            font: {
+                size: 1.8rem;
+            }    
+        }
+    }
+    @include media(1050px) {
+        &-cards {
+            overflow: visible;
+        }
+        &-card {
+            width: 100%;
+        }
+    }
+    @include media(960px) {
+        background: linear-gradient(to right, $color-lila 0%, rgb(122 107 255) 100%);
+        &-cards {
+            display: none;
+            &--mobile {
+                display: block;
+                @include flex(column, nowrap, center, center);
+                gap: 2rem;
+            }
+        }
+    }
+    @include media(940px) {
+        &-header {
+            padding: 2rem 0;
+        }
+        &-h2 {
+            font: {
+                weight: 300;
+                size: 2.2rem;
+            }
+        }
+        &-p {
+            margin-top: 1rem;
+            font: {
+                weight: 600;
+                size: 2.2rem;
+            }
+        }
+    }
+}
+
+.Card {
+    background: $color-azul-claro;
+    color: $color-azul;
+    width: 100%;
+    padding: 2rem;
+    overflow: hidden;
+
+    border-radius: 1.5rem;
+
+    @include flex(column, nowrap, center, flex-start);
+    &-header {
+        width: 100%;
+        @include flex(row, nowrap, flex-start, center);
+    }
+    &-image {
+        width: 15rem;
+        height: 15rem;
+        overflow: hidden;
+
+        border-radius: 1.5rem;
+
+        position: relative;
+    }
+    &-img {
+        object-fit: cover;
+    }
+    &-gradient {
+        background: $color-azul-4;
+        color: $color-azul;
+    }
+    &-title {
+        padding: 0 2rem;
+        @include flex(column, nowrap, center, flex-start);
+    }
+    &-h3 {
+        font: {
+            weight: 800;
+            size: 3rem;
+        }
+    }
+    &-modality {
+        @include flex(column, nowrap, center, flex-start);
+    }
+    &-info {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    &-p {
+        font: {
+            weight: 500;
+            size: 2rem;
+        }
+    }
+    &-ul {
+        margin-top: 1rem;
+        font: {
+            weight: 400;
+            size: 1.8rem;
+        }
+    }
+    &-li {
+        margin-left: 3rem;
+        list-style: disc;
+    }
+    &-contact {
+        width: 100%;
+        margin-top: 1rem;
+        @include flex(column, nowrap, center, flex-end);
+    }
+    &-a {
+        background: $color-naranja;
+        padding: 1rem 1.5rem;
+
+        border-radius: 10rem;
+        font: {
+            weight: 500;
+            size: 1.8rem;
+        }
+        color: $color-blanco;
+    }
+
+    @include media(450px) {
+        &-image {
+            width: 10rem;
+            min-width: 10rem;
+            height: 10rem;
+            min-height: 10rem;
+        }
+    }
+}
+
+
+.Jobs {
+    &-wrapper {}
+    &-header {
+        background: $color-azul;
+        color: $color-naranja;
+        padding: 4rem 0;
+    }
+    &-h2 {
+        font: {
+            weight: 900;
+            size: 5rem;
+        }
+    }
+    &-sub {
+        font: {
+            weight: 400;
+            size: 3.5rem;
+        }
+    }
+    &-cards {
+        margin-top: 3rem;
+        @include grid(2, 4rem);
+    }
+    &-card {
+        background: $color-azul-claro;
+        width: 100%;
+        height: 25rem;
+        overflow: hidden;
+
+        border-radius: 2rem;
+
+        @include flex(row, nowrap, flex-start, center);
+    }
+    &-image {
+        width: 25rem;
+        min-width: 25rem;
+        height: 100%;
+        overflow: hidden;
+
+        border-radius: 2rem;
+    }
+    &-img {
+        object-fit: cover;
+    }
+    &-info {
+        color: $color-azul;
+        width: calc(100% - 25rem);
+        padding: 2rem;
+    }
+    &-h3 {
+        font: {
+            weight: 700;
+            size: 3rem;
+        }
+    }
+    &-p {
+        &--bold {
+            font: {
+                weight: 700;
+            }
+        }
+    }
+    &-li {
+        margin-left: 3rem;
+        list-style: disc;
+    }
+    @include media(1220px) {
+        &-cards {
+            @include grid(2,1rem);
+        }
+    }
+    @include media(1135px) {
+        &-h3 {
+            font: {
+                size: 2.5rem;
+            }
+        }
+        &-p {
+            font: {
+                size: 1.5rem;
+            }
+        }
+        &-ul {
+            font: {
+                size: 1.5rem;
+            }
+        }
+    }
+    @include media(1040px) {
+        &-card {
+            height: 20rem;
+        }
+        &-image {
+            width: 20rem;
+            min-width: 20rem;
+        }
+        &-info {
+            width: calc(100% - 20rem);
+            padding: 1rem;
+        }
+    }
+    @include media(950px) {
+        &-cards {
+            @include grid(1, 1rem);
+        }
+        &-info {
+            padding: 2rem;
+        }
+    }
+    @include media(600px) {
+        &-header {
+            padding: 2rem 0;
+        }
+        &-h2 {
+            font: {
+                size: 3.5rem;
+            }
+        }
+        &-sub {
+            font: {
+                size: 2.5rem;
+            }
+        }
+    }
+    @include media(450px) {
+        &-image {
+            width: 18rem;
+            min-width: 18rem;
+        }
+        &-info {
+            padding: 1rem;
+        }
+    }
+}

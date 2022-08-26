@@ -1,0 +1,234 @@
+.About {
+    width: 100%;
+    height: 65rem;
+    overflow: hidden;
+
+    position: relative;
+    &-waves {
+        background: linear-gradient(to right, $color-lila 0%, rgb(126, 111, 247) 100%);
+        width: 100%;
+        height: 100%;
+
+        @include flex(column, nowrap, space-between, center);
+    }
+    &-wave {
+        color: $color-blanco;
+        width: 100%;
+    }
+    &-svg {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    // Position Absolute
+    &-over {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        @include flex(column, nowrap, center, center);
+    }
+    &-wrapper {
+        height: 60%;
+
+        position: relative;
+    }
+    &-header {
+        width: 100%;
+
+        @include flex(row, nowrap, flex-start, flex-start);
+
+        position: relative;
+    }
+    &-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 35rem;
+        height: 35rem;
+
+        overflow: hidden;
+
+        border-radius: 100%;
+        box-shadow: 3px 3px 1px $color-negro-2;
+    }
+    &-img {
+        object-fit: cover;
+    }
+    &-title {
+        color: $color-azul;
+        margin-left: 42rem;
+        font: {
+            size: 6rem;
+        }
+
+        @include flex(column, nowrap, center, flex-start);
+    }
+    &-saludo {
+        font: {
+            weight: 900;
+        }
+    }
+    &-name {
+        font: {
+            weight: 500;
+        }
+    }
+    &-content {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    &-ul {
+        color: $color-azul;
+        width: 55rem;
+        margin-left: 42rem;
+        padding-left: 4rem;
+    }
+    &-li {
+        list-style: disc;
+        font: {
+            weight: 400;
+            size: 2.2rem;
+        }
+    }
+    &-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        width: 100%;
+
+        @include flex(row, nowrap, flex-end, center);
+    }
+    &-a {
+        background: $color-azul;
+        color: $color-blanco;
+        padding: 1rem 1.5rem;
+
+        border-radius: 10rem;
+
+        font: {
+            weight: 400;
+            size: 1.9rem;
+        }
+    }
+
+
+    // Breakpoint 1040px
+    @include media(1040px) {
+        &-image {
+            width: 30rem;
+            height: 30rem;
+        }
+        &-title {
+            margin-left: 33rem;
+        }
+        &-ul {
+            margin-left: 33rem;
+        }
+    }
+    // Breakpoint 970px
+    @include media(970px) {
+        &-image {
+            width: 25rem;
+            height: 25rem;
+        }
+        &-title {
+            margin-left: 28rem;
+        }
+        &-ul {
+            margin-left: 28rem;
+        }
+    }
+    // Breakpoint 890px
+    @include media(890px) {
+        &-wrapper {
+            height: 80%;
+        }
+        &-image {
+            position: static;
+        }
+        &-header {
+            @include flex(row, nowrap, flex-start, center);
+        }
+        &-title {
+            margin-left: 4rem;
+        }
+        &-ul {
+            width: 100%;
+            margin: 4rem 0 0;
+        }
+    }
+    // Breakpoint 780px
+    @include media(780px) {
+        &-title {
+            font: {
+                size: 4.5rem;
+            }
+        }
+    }
+    // Breakpoint 670px
+    @include media(670px) {
+        &-image {
+            position: static;
+            width: 20rem;
+            height: 20rem;
+        }
+        &-title {
+            margin-left: 3rem;
+        }
+        &-ul {
+            margin-top: 3rem;
+        }
+    }
+    // Breakpoint 500px
+    @include media(500px) {
+        height: 60rem;
+        &-wrapper {
+            height: 85%;
+        }
+        &-title {
+            margin-left: 2rem;
+            font: {
+                size: 4rem;
+            }
+        }
+        &-ul {
+            margin-top: 2rem;
+        }
+    }
+    // Breakpoint 460px
+    @include media(460px) {
+        &-title {
+            font: {
+                size: 3.5rem;
+            }
+        }
+        &-ul {
+            margin-top: 2rem;
+        }
+    }
+    // Breakpoint 420px
+    @include media(420px) {
+        height: 50rem;
+        &-image {
+            width: 15rem;
+            height: 15rem;
+        }
+        &-title {
+            font: {
+                size: 3.2rem;
+            }
+        }
+        &-li {
+            font: {
+                size: 2rem;
+            }
+        }
+    }
+}

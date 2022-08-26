@@ -1,0 +1,74 @@
+.Alert {
+    background: $color-negro-8;
+    color: $color-azul;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    z-index: 3;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 
+        opacity .3s ease,
+    ;
+    &.is-ok {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &-wrapper {
+        height: 100%;
+        @include flex(column, nowrap, center, center);
+    }
+    &-content {
+        background: $color-blanco;
+        padding: 4rem;
+        border-radius: 2rem;
+
+        overflow: hidden;
+    }
+    &-title {
+        width: 100%;
+        text-align: center;
+    }
+    &-h2 {
+        font: {
+            weight: 900;
+            size: 3rem;
+        }
+    }
+    &-text {
+        font: {
+            weight: 500;
+            size: 1.8rem;
+        }
+    }
+    &-footer {
+        width: 100%;
+        @include flex(column, nowrap, center, center);
+    }
+    &-button {
+        background: $color-azul;
+        color: $color-blanco;
+        margin-top: 2rem;
+
+        padding: 1rem 2rem;
+        cursor: pointer;
+
+        border-radius: 10rem;
+    }
+    &-p {
+        margin-top: 1rem;
+        font: {
+            family: $font-segoe-print;
+            weight: 900;
+            size: 1.5rem;
+        }
+    }
+}

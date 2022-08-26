@@ -1,0 +1,29 @@
+@mixin flex($dir, $wrap ,$jus, $ali) {
+    display: flex;
+    flex-flow: $dir $wrap;
+    justify-content: $jus;
+    
+    @if $wrap == "wrap" {
+        align-content: $ali;
+    } @else {
+        align-items: $ali;
+    }
+}
+
+@mixin grid ($columnas,$gap) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+
+    @if $columnas == "auto" {
+        grid-auto-flow: column;
+    } @else {
+        grid-auto-flow: row;
+    }
+}
+
+@mixin media($medida : 420px) {
+    @media screen and (max-width: $medida){
+        @content;
+    }
+}

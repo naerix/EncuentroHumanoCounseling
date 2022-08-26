@@ -1,0 +1,69 @@
+.Footer {
+    background: $color-azul;
+    color: $color-blanco;
+    width: 100%;
+    padding: 4rem 0;
+    overflow: hidden;
+    &-wrapper {
+        @include flex(row, nowrap, space-between, flex-start);
+    }
+    &-ul {
+        @include flex(column, nowrap, flex-start, flex-start);
+        gap: 2rem;
+    }
+    &-li {
+        width: auto;
+        height: auto;
+    }
+    &-a {
+        width: 100%;
+        height: 100%;
+        @include flex(row, nowrap, flex-start, center);
+        gap: 1rem;
+    }
+    &-arrow{
+        width: 7rem;
+        height: auto;
+    }
+    &-image{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+    }
+    &-img {
+        object-fit: contain;
+    }
+    &-name {
+        font: {
+            family: $font-segoe-print;
+            weight: 900;
+            size: 2.5rem;
+        }
+    }
+    &-icon {
+        width: 6rem;
+        height: 6rem;
+
+        &--logo {
+            background: $color-blanco;
+            border-radius: 100%;
+        }
+    }
+    &-text {
+        font: {
+            weight: 600;
+            size: 2rem;
+        }
+    }
+    &-button {
+        background: $color-blanco;
+        color: $color-azul;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+    &-svg {
+        width: 5rem;
+        height: 5rem;
+    }
+}

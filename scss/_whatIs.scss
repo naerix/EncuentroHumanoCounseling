@@ -1,0 +1,267 @@
+.WhatIs {
+    width: 100%;
+    overflow: hidden;
+    &-header {
+        background: $color-azul;
+        width: 100%;
+    }
+    &-title {
+        padding: 3.5rem 0;
+        font: {
+            weight: 800;
+            size: 3.3rem;
+        }
+    }
+    &-h2 {
+        color: $color-naranja;
+    }
+    
+    &-content {
+        background: linear-gradient(to right, $color-lila 0%, $color-gradient-naranja 100%);
+
+        position: relative;
+
+        padding-bottom: 40rem;
+    }
+    &-wrapper {}
+    &-cards {
+        @include flex(column, nowrap, center, center);
+        width: 100%;
+        &--1 {
+            width: 100%;
+            height: 40rem;
+            @include flex(row, nowrap, center, center);
+        }
+        &--2 {
+            width: 100%;
+            @include flex(row, nowrap, center, center);
+            gap: 5rem;
+        }
+    }
+    &-card {
+        padding: 0 2rem;
+        padding-top: 6rem;
+        height: 100%;
+        &--start {
+            @include flex(column, nowrap, flex-start, center);
+        }
+        &--end {
+            @include flex(column, nowrap, flex-end, center);
+        }
+        &--center {
+            @include flex(column, nowrap, center, center);
+        }
+        &Content {
+            background: $color-azul-claro;
+            border-radius: 2rem;
+            padding: 3.5rem;
+
+            position: relative;
+        }
+        &--one {
+            width: 35%;
+        }
+        &--two {
+            width: 35%;
+        }
+        &--three {
+            width: 30%;
+        }
+        &--four {
+            width: 42%;
+        }
+        &--five {
+            width: 42%;
+        }
+    }
+    &-cardInfo {
+        color: $color-azul;
+        width: 100%;
+        @include flex(column, nowrap, flex-start, center);
+    }
+    &-cardP {
+        font: {
+            weight: 400;
+            size: 2.5rem;
+        }
+    }
+    &-cardSpan {
+        font: {
+            weight: 700;
+            size: 2.5rem;
+        }
+    }
+
+    &-list {
+        width: 100%;
+        @include flex(row, nowrap, center, center);
+    }
+    &-cardUl {
+        width: 50%;
+        padding: 0 3rem;
+        padding-top: 1rem;
+        @include flex(column, nowrap, center, flex-start);
+    }
+    &-cardLi {
+        list-style: disc;
+    }
+    &-cardText {
+        font: {
+            weight: 400;
+            size: 2rem;
+        }
+    }
+
+    &-cardIcon {
+        background: $color-azul;
+        position: absolute;
+        top: -3rem;
+        left: -3rem;
+        width: 6rem;
+        height: 6rem;
+        padding: 1rem;
+
+        border-radius: 10rem;
+
+        @include flex(column, nowrap, center, center);
+    }
+    &-cardSvg {
+        width: 100%;
+        height: 100%;
+        fill: $color-blanco;
+    }
+
+    &-hojas {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+
+        @include flex(row, nowrap, center, flex-end);
+    }
+    &-hojasImg {
+        width: 100%;
+        object-fit: contain;
+    }
+
+
+    // Breakpoint 1350px
+    @include media(1350px) {
+        &-card {
+            &--one {
+                width: 100%;
+            }
+            &--two {
+                width: 100%;
+            }
+            &--three {
+                width: 100%;
+            }
+        }
+    }
+    // Breakpoint 1150px
+    @include media(1150px) {
+        &-content {
+            padding-bottom: 33rem;
+        }
+        &-cards {
+            &--1 {
+                height: auto;
+                @include flex(column, nowrap, center, center);
+            }
+            &--2 {
+                height: auto;
+                @include flex(column, nowrap, center, center);
+                gap: 0;
+            }
+        }
+        &-card {
+            margin: 1rem 0;
+            padding: 0;
+            &--one {
+                width: 100%;
+            }
+            &--two {
+                width: 100%;
+            }
+            &--three {
+                width: 100%;
+            }
+
+            &--four {
+                width: 100%;
+            }
+            &--five {
+                width: 100%;
+            }
+
+            &Content {
+                width: 100%;
+            }
+        }
+    }
+    // Breakpoint 1000px
+    @include media (1000px) {
+        &-card {
+            &P {
+                width: 100%;
+                font: {
+                    size: 2rem;
+                }
+            }
+            &Span {
+                font: {
+                    size: 2rem;
+                }
+            }
+            &Text {
+                font: {
+                    size: 1.7rem;
+                }
+            }
+        }
+    }
+    // Breakpoint 900px
+    @include media (900px) {
+        &-content {
+            padding-bottom: 25rem;
+        }
+    }
+    // Breakpoint 600px
+    @include media (600px) {
+        &-content {
+            padding-bottom: 20rem;
+        }
+    }
+    // Breakpoint 535px
+    @include media (535px) {
+        &-content {
+            padding-bottom: 15rem;
+        }
+        &-title {
+            font: {
+                size: 2.8rem;
+            }
+        }
+        &-card {
+            &Icon {
+                width: 3rem;
+                height: 3rem;
+                top: 1rem;
+                left: 1rem;
+                padding: .5rem;
+            }
+        }
+    }
+    @include media (455px) {
+        &-content {
+            padding-bottom: 12rem;
+        }
+        &-title {
+            font: {
+                size: 2.5rem;
+            }
+        }
+    }
+}

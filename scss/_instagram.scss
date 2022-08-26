@@ -1,0 +1,90 @@
+.Instagram {
+    width: 100%;
+    overflow: hidden;
+    &-wrapper {
+        @include flex(column, nowrap, center, center);
+    }
+    &-header {
+        font: {
+            weight: 800;
+            size: 3.2rem;
+        }
+    }
+    &-h2 {
+        color: $color-naranja;
+        padding: 2rem 0;
+        text-align: center;
+        &--white {
+            color: $color-blanco;
+        }
+    }
+    &-content {
+        width: 100%;
+        margin-top: 1rem;
+        @include flex(column, wrap, center, center);
+    }
+    &-card {
+        background: $color-azul;
+        color: $color-blanco;
+        padding: 1.5rem;
+
+        overflow: hidden;
+
+        border-radius: 1.5rem;
+        @include flex(row, nowrap, center, center);
+        gap: 1.5rem;
+    }
+    &-icon {
+        width: 12.5rem;
+    }
+    &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &-p {
+        font: {
+            weight: 700;
+            size: 3rem;
+        };
+    }
+    &-text {
+        padding: 2.5rem 0;
+        color: $color-azul;
+        font: {
+            weight: 700;
+            size: 2.5rem;
+        }
+        text-align: center;
+    }
+
+    
+    // Breakpoint 680px
+    @include media(680px) {
+        &-header {
+            font: {
+                size: 2.8rem;
+            }
+        }
+        &-card {
+            width: 100%;
+        }
+        &-p {
+            font: {
+                size: 2.5rem;
+            }
+        }
+    }
+    @include media(480px) {
+        &-header {
+            font: {
+                size: 2.5rem;
+            }
+        }
+        &-p {
+            font: {
+                size: 2.3rem;
+            }
+        }
+    }
+}
