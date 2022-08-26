@@ -23,8 +23,8 @@
             color: $color-blanco;
         }
         &--two {
-            background: linear-gradient(to right, $color-lila 0%, $color-gradient-naranja 100%);
-            color: $color-azul;
+            background: linear-gradient(to right, $color-lila 0%, rgb(74 98 180) 100%);
+            color: $color-blanco;
         }
         &--three {
             background: $color-naranja;
